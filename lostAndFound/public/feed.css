@@ -1,0 +1,159 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(216, 216, 216);
+}
+
+header{
+    color: crimson;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    margin-top: -3vh;
+    flex-direction: row;
+    background-color: white;
+    border-bottom: 1px solid;
+    border-color: black;
+    text-shadow: 100px;
+}
+
+#headerText{
+    margin-left: 2vw;
+    width: 50%;
+}
+
+ul{
+    padding-top: 10vh;
+}
+
+#items{
+    margin-bottom: 2vh;
+    padding-top: 2vh;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.mg0{
+    margin: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh
+}
+
+.timeStamp{
+    padding-bottom: 1px;
+    color: gray;
+}
+
+h5{
+    margin: 0;
+}
+
+#upload{
+    position: fixed;
+    bottom: 7vh;
+    left: 73vw;
+    padding-left: 29px;
+    padding-right: 29px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 100px;
+    font-size: 30px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#upload:hover{
+    background-color: rgb(200, 0, 40);
+    transform: scale(1.01);
+}
+
+#mainPart{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vh;
+}
+
+#itMine{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    background-color: crimson;
+    color: white;
+}
+
+#itMine:hover{
+    background-color: rgb(200, 0, 40);
+    transform: scale(1.01);
+}
+
+#formContainer{
+    position: fixed;
+    top: 50%;
+    display: block;
+    left: 43%;
+    background-color: white;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#enterName{
+    background-color: crimson;
+    color: white;
+    margin-top: 1vh;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 7.8vw;
+    padding-right: 7.8vw;
+}
+
+#cancel{
+    background-color: lightgrey;
+    border: 0;
+    margin-top: 1vh;
+    border-radius: 10px;
+    padding-left: 7.8vw;
+    padding-right: 7.8vw;
+}
+
+#schoolLogo{
+    margin-top: 2vh;
+    max-height: 8vh;
+    width: auto;
+    margin-left: 2vw;
+    margin-right: 0;
+}
+
+#parerellogram{
+    width: 15vw;
+	height: 13.6vh;
+	transform: skew(-20deg);
+	background: crimson;
+    margin-left: auto;
+}

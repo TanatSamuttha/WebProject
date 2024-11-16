@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="upload.css">
+    <title>Lost And Found</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="headerText">Upload</h1>
+        <div id="parerellogram"></div>
+    </header>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input maxlength="45" type="text" name="title" placeholder="Title" id="title" required>
+        <textarea maxlength="100" name="detail" placeholder="Detail" id="detail" required></textarea>
+        <input type="file" name="image" id="uploadImage" required>
+        <label for="uploadImage" id="image">+</label>
+        <img for="uploadImage" id="imagePreview" src="#" alt="Image Preview">
+        <button type="submit" id="submit">Submit</button>
+
+        <script>
+            const textarea = document.getElementById('detail');
+
+            textarea.addEventListener('input', function () {
+                this.style.height = 'auto';
+                this.style.height = this.scrollHeight + 'px';
+            });
+        </script>
+
+        <script>
+            const fileInput = document.getElementById('uploadImage');
+            const imagePreview = document.getElementById('imagePreview');
+            const label = document.getElementById('image');
+
+            imagePreview.style.display = 'none'
+
+            fileInput.addEventListener('change', function () {
+                const file = this.files[0];
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        label.style.display = 'none';
+                        imagePreview.src = e.target.result;
+                        imagePreview.style.display = 'block';
+                    }
+
+                    reader.readAsDataURL(file);
+                }
+            });
+        </script>
+    </form>
+    <a href="/feed"><button id="cancel">Cancel</button></a>
+</body>
+
+</html>
